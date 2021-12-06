@@ -114,7 +114,6 @@ class Materials:
         self.CriticalFrequency = (const.SoundVelocity**2)/(1.8*self.QuasiLongPhaseVelocity*self.Thickness)
         self.CriticalFrequencyCorrection = self.CriticalFrequency*(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity+np.sqrt(1+(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity)**2))
 
-
 class AdditionalLayers:
 
     def __init__(self, Length, Width, Thickness, Mass) -> None:

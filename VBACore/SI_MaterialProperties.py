@@ -4,6 +4,7 @@
 # The Available Material Data in this Code are as follows
 # 1. Concrete, 2 .Calcium, 3. Autoclaved Concrete, 4. Light Aggregate Blocks, 5. Dense Aggregate Blocks, 6. Bricks, 7. Plaster Board Type 2, 8. Plaster Board Type 2, 9. Chipboard
 
+from matplotlib.pyplot import semilogx
 from SI_Constants import SIConstants
 import numpy as np
 
@@ -15,7 +16,7 @@ class Materials:
         self.Thickness = Thickness
         self.Mass = Mass
 
-    def concrete(self, ElementName):
+    def concrete(self, ElementName: str):
         self.ElementName = ElementName
         self.Density = 2200.0
         self.QuasiLongPhaseVelocity = 3800.0
@@ -25,10 +26,10 @@ class Materials:
         const = SIConstants
         self.CriticalFrequency = (const.SoundVelocity**2)/(1.8*self.QuasiLongPhaseVelocity*self.Thickness)
         self.CriticalFrequencyCorrection = self.CriticalFrequency*(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity+np.sqrt(1+(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity)**2))
-        self.absorption = np.array[0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.0133333,0.0166667,0.02,0.02,0.02,0.02,0.0233333,0.0266667,0.03,0.03,0.03,0.03,0.0333333,0.0366667,0.04,0.04]
-        self.sacttering = np.array[0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05]
+        self.absorption = np.array([0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.0133333,0.0166667,0.02,0.02,0.02,0.02,0.0233333,0.0266667,0.03,0.03,0.03,0.03,0.0333333,0.0366667,0.04,0.04])
+        self.scattering = np.array([0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05])
 
-    def calcium(self, ElementName):
+    def calcium(self, ElementName: str):
         self.ElementName = ElementName
         self.Type = 'Calcium'
         self.Density = 1800.0
@@ -38,10 +39,10 @@ class Materials:
         const = SIConstants
         self.CriticalFrequency = (const.SoundVelocity**2)/(1.8*self.QuasiLongPhaseVelocity*self.Thickness)
         self.CriticalFrequencyCorrection = self.CriticalFrequency*(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity+np.sqrt(1+(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity)**2))
-        self.absorption = np.array[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-        self.scattering = np.array[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        self.absorption = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+        self.scattering = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 
-    def autoclavedConcrete(self, ElementName):
+    def autoclavedConcrete(self, ElementName: str):
         self.ElementName = ElementName
         self.Type = 'AutoclavedConcrete'
         self.Density = 600.0
@@ -51,10 +52,10 @@ class Materials:
         const = SIConstants
         self.CriticalFrequency = (const.SoundVelocity**2)/(1.8*self.QuasiLongPhaseVelocity*self.Thickness)
         self.CriticalFrequencyCorrection = self.CriticalFrequency*(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity+np.sqrt(1+(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity)**2))
-        self.absorption = np.array[0.15,0.15,0.15,0.15,0.15,0.15,0.166667,0.183333,0.2,0.233333,0.266667,0.3,0.31,0.32,0.33,0.353333,0.376667,0.4,0.403333,0.406667,0.41,0.39,0.37,0.35,0.343333,0.336667,0.33,0.343333,0.356667,0.37,0.37]
-        self.sacttering = np.array[0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.106667,0.113333,0.12,0.15,0.18,0.21,0.242,0.274,0.306,0.340667,0.375333,0.41,0.403333,0.396667,0.39,0.38,0.37,0.36,0.36]
+        self.absorption = np.array([0.15,0.15,0.15,0.15,0.15,0.15,0.166667,0.183333,0.2,0.233333,0.266667,0.3,0.31,0.32,0.33,0.353333,0.376667,0.4,0.403333,0.406667,0.41,0.39,0.37,0.35,0.343333,0.336667,0.33,0.343333,0.356667,0.37,0.37])
+        self.scattering = np.array([0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.106667,0.113333,0.12,0.15,0.18,0.21,0.242,0.274,0.306,0.340667,0.375333,0.41,0.403333,0.396667,0.39,0.38,0.37,0.36,0.36])
         
-    def lightAggregateBlocks(self, ElementName):
+    def lightAggregateBlocks(self, ElementName: str):
         self.ElementName = ElementName
         self.Type = 'LightAggregateBlocks'
         self.Density = 1400.0
@@ -64,10 +65,10 @@ class Materials:
         const = SIConstants
         self.CriticalFrequency = (const.SoundVelocity**2)/(1.8*self.QuasiLongPhaseVelocity*self.Thickness)
         self.CriticalFrequencyCorrection = self.CriticalFrequency*(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity+np.sqrt(1+(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity)**2))
-        self.absorption = np.array[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-        self.scattering = np.array[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        self.absorption = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+        self.scattering = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 
-    def denseAggregateBlocks(self, ElementName):
+    def denseAggregateBlocks(self, ElementName: str):
         self.ElementName = ElementName
         self.Type = 'DenseAggregateBlocks'
         self.Density = 2000.0
@@ -77,10 +78,10 @@ class Materials:
         const = SIConstants
         self.CriticalFrequency = (const.SoundVelocity**2)/(1.8*self.QuasiLongPhaseVelocity*self.Thickness)
         self.CriticalFrequencyCorrection = self.CriticalFrequency*(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity+np.sqrt(1+(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity)**2))
-        self.absorption = np.array[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-        self.scattering = np.array[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        self.absorption = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+        self.scattering = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 
-    def bricks(self, ElementName):
+    def bricks(self, ElementName: str):
         self.ElementName = ElementName
         self.Type = 'Bricks'
         self.Density = 1500.0
@@ -90,10 +91,10 @@ class Materials:
         const = SIConstants
         self.CriticalFrequency = (const.SoundVelocity**2)/(1.8*self.QuasiLongPhaseVelocity*self.Thickness)
         self.CriticalFrequencyCorrection = self.CriticalFrequency*(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity+np.sqrt(1+(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity)**2))
-        self.absorption = np.array[0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3]
-        self.sacttering = np.array[0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2]
+        self.absorption = np.array([0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3])
+        self.scattering = np.array([0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2])
         
-    def plasterboard(self, ElementName):
+    def plasterboard(self, ElementName: str):
         self.ElementName = ElementName
         self.Type = 'Plasterboard'
         self.Density = 860.0
@@ -103,10 +104,10 @@ class Materials:
         const = SIConstants
         self.CriticalFrequency = (const.SoundVelocity**2)/(1.8*self.QuasiLongPhaseVelocity*self.Thickness)
         self.CriticalFrequencyCorrection = self.CriticalFrequency*(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity+np.sqrt(1+(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity)**2))
-        self.absorption = np.array[0.12,0.12,0.12,0.13,0.14,0.15,0.15,0.15,0.15,0.183333,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.16,0.17,0.18]
-        self.sacttering = np.array[0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1]
+        self.absorption = np.array([0.12,0.12,0.12,0.13,0.14,0.15,0.15,0.15,0.15,0.183333,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.16,0.17,0.18])
+        self.scattering = np.array([0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1])
         
-    def plasterboard2(self, ElementName):
+    def plasterboard2(self, ElementName: str):
         self.ElementName = ElementName
         self.Type = 'PlasterboardType2'
         self.Density = 680.0
@@ -116,10 +117,10 @@ class Materials:
         const = SIConstants
         self.CriticalFrequency = (const.SoundVelocity**2)/(1.8*self.QuasiLongPhaseVelocity*self.Thickness)
         self.CriticalFrequencyCorrection = self.CriticalFrequency*(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity+np.sqrt(1+(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity)**2))
-        self.absorption = np.array[0.12,0.12,0.12,0.13,0.14,0.15,0.15,0.15,0.15,0.183333,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.16,0.17,0.18]
-        self.sacttering = np.array[0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1]
+        self.absorption = np.array([0.12,0.12,0.12,0.13,0.14,0.15,0.15,0.15,0.15,0.183333,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.16,0.17,0.18])
+        self.scattering = np.array([0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1])
         
-    def chipboard(self, ElementName):
+    def chipboard(self, ElementName: str):
         self.ElementName = ElementName
         self.Type = 'Chipboard'
         self.Density = 760.0
@@ -129,8 +130,29 @@ class Materials:
         const = SIConstants
         self.CriticalFrequency = (const.SoundVelocity**2)/(1.8*self.QuasiLongPhaseVelocity*self.Thickness)
         self.CriticalFrequencyCorrection = self.CriticalFrequency*(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity+np.sqrt(1+(4.05*self.Thickness*const.OneThirdOctaveFrequency/self.QuasiLongPhaseVelocity)**2))
-        self.absorption = np.array[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-        self.scattering = np.array[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        self.absorption = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+        self.scattering = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+
+    def plotting(self, Element: object):
+        import matplotlib.pyplot as plt
+        plt.style.use('seaborn-dark')
+        const = SIConstants
+        if len(Element.absorption == 31):
+            plt.semilogx(const.OneThirdOctaveFrequencyFull, Element.absorption, label="Absorption", color="Red", linestyle='--')
+        elif len(Element.absorption == 21):
+            plt.semilogx(const.OneThirdOctaveFrequencyFull, Element.absorption, label="Absorption", color="Red", linestyle='--')
+        if len(Element.scattering == 31):
+            plt.semilogx(const.OneThirdOctaveFrequencyFull, Element.scattering, label="Scattering", color="Blue", linestyle='-.')
+        elif len(Element.scattering == 21):
+            plt.semilogx(const.OneThirdOctaveFrequencyFull, Element.scattering, label="Scattering", color="Red", linestyle='-.')
+        else:
+            print("Data Not available")
+        
+        plt.legend()
+        plt.grid(True)
+        plt.xlabel("Frequency (Hz)")
+        plt.ylabel("Coefficients")
+        plt.show()
 
 class AdditionalLayers:
 
@@ -147,10 +169,10 @@ class AdditionalLayers:
         self.Area = self.Length*self.Width
         self.Stifness = 8.0
 
-# from SI_Constants import SIConstants
-# const = SIConstants
-# Mat1 = Materials(6, 5, 0.02, 484)
-# Mat1.concrete('Concrete')
-# # print(const.SoundVelocity*Mat1.Length)
-# print(Mat1.CriticalFrequency)
-# print(Mat1.CriticalFrequencyCorrection)
+
+## Testing the Code ##
+if __name__ == '__main__':
+    Mat1 = Materials(6, 5, 0.02, 484)
+    Mat1.plasterboard('plasterboard')
+    Mat1.plotting(Mat1)
+    

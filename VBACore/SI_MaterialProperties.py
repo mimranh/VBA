@@ -172,7 +172,37 @@ class AdditionalLayers:
 
 ## Testing the Code ##
 if __name__ == '__main__':
-    Mat1 = Materials(6, 5, 0.02, 484)
-    Mat1.plasterboard('plasterboard')
-    Mat1.plotting(Mat1)
+    Element1 = Materials(4, 3, 0.02, 484)
+    Element1.concrete('Concrete')
+
+    Element2 = Materials(4, 3, 0.02, 484)
+    Element2.concrete('Concrete')
+
+    Element3 = Materials(4, 3, 0.02, 484)
+    Element3.concrete('Concrete')
+
+    Element4 = Materials(4, 3, 0.02, 484)
+    Element4.concrete('Concrete')
+
+    Element5 = Materials(4, 3, 0.02, 484)
+    Element5.concrete('Concrete')
     
+    Element6 = Materials(4, 3, 0.02, 484)
+    Element6.concrete('Concrete')
+    
+    Element7 = Materials(4, 3, 0.02, 484)
+    Element7.concrete('Concrete')
+    
+    Element8 = Materials(4, 3, 0.02, 484)
+    Element8.concrete('Concrete')
+    
+    Element9 = Materials(4, 3, 0.02, 484)
+    Element9.concrete('Concrete')
+    
+    Element10 = Materials(4, 3, 0.02, 484)
+    Element10.concrete('Concrete')
+    
+    Element11 = Materials(4, 3, 0.02, 484)
+    Element11.concrete('Concrete')
+    
+

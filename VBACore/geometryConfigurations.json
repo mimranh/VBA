@@ -1,393 +1,403 @@
-[
-    {
-        "Walls": [
-            {
-                "Wall0": "Partition",
-                "Mass": 484,
-                "Dimensions": [
-                    {
-                        "Length": 4,
-                        "Width": 3,
-                        "Height": 2.5,
-                        "Thickness": 0.02
-                    }
-                ]
-            },
-            {
-                "Wall1": "SourceWall1",
-                "Mass": 484,
-                "Dimensions": [
-                    {
-                        "Length": 4,
-                        "Width": 3,
-                        "Height": 2.5,
-                        "Thickness": 0.02
-                    }
-                ]
-            },
-            {
-                "Wall2": "SourceWall2",
-                "Mass": 484,
-                "Dimensions": [
-                    {
-                        "Length": 4,
-                        "Width": 3,
-                        "Height": 2.5,
-                        "Thickness": 0.02
-                    }
-                ]
-            },
-            {
-                "Wall3": "SourceCeiling",
-                "Mass": 484,
-                "Dimensions": [
-                    {
-                        "Length": 4,
-                        "Width": 3,
-                        "Height": 2.5,
-                        "Thickness": 0.02
-                    }
-                ]
-            },
-            {
-                "Wall4": "SourceFloor",
-                "Mass": 484,
-                "Dimensions": [
-                    {
-                        "Length": 4,
-                        "Width": 3,
-                        "Height": 2.5,
-                        "Thickness": 0.02
-                    }
-                ]
-            },
-            {
-                "Wall5": "ReceiverWall1",
-                "Mass": 484,
-                "Dimensions": [
-                    {
-                        "Length": 4,
-                        "Width": 3,
-                        "Height": 2.5,
-                        "Thickness": 0.02
-                    }
-                ]
-            },
-            {
-                "Wall6": "ReceiverWall2",
-                "Mass": 484,
-                "Dimensions": [
-                    {
-                        "Length": 4,
-                        "Width": 3,
-                        "Height": 2.5,
-                        "Thickness": 0.02
-                    }
-                ]
-            },
-            {
-                "Wall7": "ReceiverCeiling",
-                "Mass": 484,
-                "Dimensions": [
-                    {
-                        "Length": 4,
-                        "Width": 3,
-                        "Height": 2.5,
-                        "Thickness": 0.02
-                    }
-                ]
-            },
-            {
-                "Wall8": "ReceiverFloor",
-                "Mass": 484,
-                "Dimensions": [
-                    {
-                        "Length": 4,
-                        "Width": 3,
-                        "Height": 2.5,
-                        "Thickness": 0.02
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Junctions": [
-            {
-                "AvailableJunctionTypes": [
-                    "CrossJunction",
-                    "TJunction",
-                    "WallJunctionFlexibleInterLayer",
-                    "LightDoubleLeafWallHomoX",
-                    "LightDoubleLeafWallHomoL",
-                    "LCorner",
-                    "Thinkness",
-                    "TJunctionFloor:Faced",
-                    "XJunctionFloorDouble",
-                    "TJunctionFloor:Double",
-                    "XJunctionFloor:Countinuous"
-                ]
-            },
-            {
-                "Junction1": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceCeiling",
-                            "SourceCeiling",
-                            "SourceBack",
-                            "SourceBack"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction2": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceWall2",
-                            "SourceCeiling",
-                            "SourceBack",
-                            "SourceBack"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction3": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceCeiling",
-                            "SourceCeiling",
-                            "SourceBack",
-                            "SourceBack"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction4": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceWall1",
-                            "SourceWall1",
-                            "SourceBack",
-                            "SourceBack"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction5": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceCeiling",
-                            "SourceCeiling",
-                            "SourceWall2",
-                            "SourceWall2"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction6": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceFloor",
-                            "SourceFloor",
-                            "SourceWall2",
-                            "SourceWall2"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction7": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceFloor",
-                            "SourceFloor",
-                            "SourceWall1",
-                            "SourceWall1"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction8": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceCeiling",
-                            "SourceCeiling",
-                            "SourceWall1",
-                            "SourceWall1"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction9": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceCeiling",
-                            "ReceiverCeiling",
-                            "Partition",
-                            "Partition"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction10": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceWall2",
-                            "ReceiverWall2",
-                            "Partition",
-                            "Partition"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction11": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceFloor",
-                            "ReceiverFloor",
-                            "Partition",
-                            "Partition"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction12": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "SourceWall1",
-                            "ReceiverWall1",
-                            "Partition",
-                            "Partition"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction13": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "ReceiverCeiling",
-                            "ReceiverCeiling",
-                            "ReceiverWall2",
-                            "ReceiverWall2"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction14": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "ReceiverFloor",
-                            "ReceiverFloor",
-                            "ReceiverWall2",
-                            "ReceiverWall2"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction15": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "ReceiverFloor",
-                            "ReceiverFloor",
-                            "ReceiverWall1",
-                            "ReceiverWall1"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction16": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "ReceiverCeiling",
-                            "ReceiverCeiling",
-                            "ReceiverWall1",
-                            "ReceiverWall1"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction17": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "ReceiverCeiling",
-                            "ReceiverCeiling",
-                            "ReceiverBack",
-                            "ReceiverBack"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction18": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "ReceiverWall2",
-                            "ReceiverWall2",
-                            "ReceiverBack",
-                            "ReceiverBack"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction19": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "ReceiverFloor",
-                            "ReceiverFloor",
-                            "ReceiverBack",
-                            "ReceiverBack"
-                        ]
-                    }
-                ]
-            },
-            {
-                "Junction20": [
-                    {
-                        "JunctionType": "CrossJunction",
-                        "MassAttached": [
-                            "ReceiverWall1",
-                            "ReceiverWall1",
-                            "ReceiverBack",
-                            "ReceiverBack"
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-]
+{
+    "Walls": [
+        {
+            "Wall0": "Partition",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        },
+        {
+            "Wall1": "SourceWall1",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        },
+        {
+            "Wall2": "SourceWall2",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        },
+        {
+            "Wall3": "SourceCeiling",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        },
+        {
+            "Wall4": "SourceFloor",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        },
+        {
+            "Wall5": "SourceBack",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        },
+        {
+            "Wall6": "ReceiverWall1",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        },
+        {
+            "Wall7": "ReceiverWall2",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        },
+        {
+            "Wall8": "ReceiverCeiling",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        },
+        {
+            "Wall9": "ReceiverFloor",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        },
+        {
+            "Wall10": "ReceiverBack",
+            "Mass": 484,
+            "Dimensions": [
+                {
+                    "Length": 4,
+                    "Width": 3,
+                    "Thickness": 0.02
+                }
+            ]
+        }
+    ],
+    
+    "Junctions": [
+        {
+            "AvailableJunctionTypes": [
+                "CrossJunction",
+                "TJunction",
+                "WallJunctionFlexibleInterLayer",
+                "LightDoubleLeafWallHomoX",
+                "LightDoubleLeafWallHomoL",
+                "LCorner",
+                "Thinkness",
+                "TJunctionFloor:Faced",
+                "XJunctionFloorDouble",
+                "TJunctionFloor:Double",
+                "XJunctionFloor:Countinuous"
+            ]
+        },
+        {
+            "Junction1": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceCeiling",
+                        "SourceCeiling",
+                        "SourceBack",
+                        "SourceBack"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction2": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceWall2",
+                        "SourceCeiling",
+                        "SourceBack",
+                        "SourceBack"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction3": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceCeiling",
+                        "SourceCeiling",
+                        "SourceBack",
+                        "SourceBack"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction4": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceWall1",
+                        "SourceWall1",
+                        "SourceBack",
+                        "SourceBack"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction5": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceCeiling",
+                        "SourceCeiling",
+                        "SourceWall2",
+                        "SourceWall2"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction6": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceFloor",
+                        "SourceFloor",
+                        "SourceWall2",
+                        "SourceWall2"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction7": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceFloor",
+                        "SourceFloor",
+                        "SourceWall1",
+                        "SourceWall1"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction8": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceCeiling",
+                        "SourceCeiling",
+                        "SourceWall1",
+                        "SourceWall1"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction9": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceCeiling",
+                        "ReceiverCeiling",
+                        "Partition",
+                        "Partition"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction10": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceWall2",
+                        "ReceiverWall2",
+                        "Partition",
+                        "Partition"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction11": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceFloor",
+                        "ReceiverFloor",
+                        "Partition",
+                        "Partition"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction12": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "SourceWall1",
+                        "ReceiverWall1",
+                        "Partition",
+                        "Partition"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction13": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "ReceiverCeiling",
+                        "ReceiverCeiling",
+                        "ReceiverWall2",
+                        "ReceiverWall2"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction14": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "ReceiverFloor",
+                        "ReceiverFloor",
+                        "ReceiverWall2",
+                        "ReceiverWall2"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction15": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "ReceiverFloor",
+                        "ReceiverFloor",
+                        "ReceiverWall1",
+                        "ReceiverWall1"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction16": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "ReceiverCeiling",
+                        "ReceiverCeiling",
+                        "ReceiverWall1",
+                        "ReceiverWall1"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction17": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "ReceiverCeiling",
+                        "ReceiverCeiling",
+                        "ReceiverBack",
+                        "ReceiverBack"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction18": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "ReceiverWall2",
+                        "ReceiverWall2",
+                        "ReceiverBack",
+                        "ReceiverBack"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction19": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "ReceiverFloor",
+                        "ReceiverFloor",
+                        "ReceiverBack",
+                        "ReceiverBack"
+                    ]
+                }
+            ]
+        },
+        {
+            "Junction20": [
+                {
+                    "JunctionType": "CrossJunction",
+                    "MassAttached": [
+                        "ReceiverWall1",
+                        "ReceiverWall1",
+                        "ReceiverBack",
+                        "ReceiverBack"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,7 +1,6 @@
 #
 # Viberation Transmission over Junction for Heavy Weighted Elements
 
-from os import pardir
 import numpy as np
 from SI_Constants import SIConstants
 import json
@@ -17,9 +16,25 @@ class SI_ViberationTransmission(Materials):
         self.Geometry = json.loads(self.read_Geometry)
 
 
-    def viberationTransmissionElement(self, Element):
-       
-       pass
+    
+
+    def viberationTransmissionElement(self, Element, Method):
+        for index in range(4):
+            if Method == "Emprical":
+                JunctionType = Element
+            
+            elif Method == "Numerical":
+                for index in range(len(const.OneThirdOctaveFrequency)):
+                    pass
+
+
+
+
+
+
+    def viberationTransmissionConstruction(self, Element, Method):
+        pass
+
         
 
 
@@ -32,6 +47,8 @@ if __name__ == '__main__':
     Room.concrete("Concrete")
     Room.readGeometry("VBACore/geometryConfigurations.json")
 
+    const = SIConstants
+    
     print("Done")
     # Room.concrete("Concrete")
     

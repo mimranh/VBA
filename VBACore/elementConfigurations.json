@@ -1,0 +1,53 @@
+{
+    "Walls": [
+        {
+            "WallID": "Partition",
+            "Mass": 484,
+            "Length": 4,
+            "Width": 3,
+            "Thickness": 0.02
+        }
+    ],
+    "Junctions": [
+        {
+            "JunctionID": "Junction9",
+            "JunctionType": "CrossJunction",
+            "MassAttached": [
+                "SourceCeiling",
+                "ReceiverCeiling",
+                "Partition",
+                "Partition"
+            ]
+        },
+        {
+            "JunctionID": "Junction10",
+            "JunctionType": "CrossJunction",
+            "MassAttached": [
+                "SourceWall2",
+                "ReceiverWall2",
+                "Partition",
+                "Partition"
+            ]
+        },
+        {
+            "JunctionID": "Junction11",
+            "JunctionType": "CrossJunction",
+            "MassAttached": [
+                "SourceFloor",
+                "ReceiverFloor",
+                "Partition",
+                "Partition"
+            ]
+        },
+        {
+            "JunctionID": "Junction12",
+            "JunctionType": "CrossJunction",
+            "MassAttached": [
+                "SourceWall1",
+                "ReceiverWall1",
+                "Partition",
+                "Partition"
+            ]
+        }
+    ]
+}

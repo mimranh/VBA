@@ -10,13 +10,13 @@ import numpy as np
 
 class Materials:
     
-    def __init__(self, Length, Width, Thickness, Mass):
-        self.Length = Length
-        self.Width = Width
-        self.Thickness = Thickness
-        self.Mass = Mass
+    # def __init__(self, Length, Width, Thickness, Mass):
+    #     self.Length = Length
+    #     self.Width = Width
+    #     self.Thickness = Thickness
+    #     self.Mass = Mass
 
-    def concrete(self, ElementName: str):
+    def concrete(self, ElementName):
         self.ElementName = ElementName
         self.Density = 2200.0
         self.QuasiLongPhaseVelocity = 3800.0
@@ -29,7 +29,7 @@ class Materials:
         self.absorption = np.array([0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.01,0.0133333,0.0166667,0.02,0.02,0.02,0.02,0.0233333,0.0266667,0.03,0.03,0.03,0.03,0.0333333,0.0366667,0.04,0.04])
         self.scattering = np.array([0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05])
 
-    def calcium(self, ElementName: str):
+    def calcium(self, ElementName):
         self.ElementName = ElementName
         self.Type = 'Calcium'
         self.Density = 1800.0
@@ -42,7 +42,7 @@ class Materials:
         self.absorption = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
         self.scattering = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 
-    def autoclavedConcrete(self, ElementName: str):
+    def autoclavedConcrete(self, ElementName):
         self.ElementName = ElementName
         self.Type = 'AutoclavedConcrete'
         self.Density = 600.0
@@ -55,7 +55,7 @@ class Materials:
         self.absorption = np.array([0.15,0.15,0.15,0.15,0.15,0.15,0.166667,0.183333,0.2,0.233333,0.266667,0.3,0.31,0.32,0.33,0.353333,0.376667,0.4,0.403333,0.406667,0.41,0.39,0.37,0.35,0.343333,0.336667,0.33,0.343333,0.356667,0.37,0.37])
         self.scattering = np.array([0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.106667,0.113333,0.12,0.15,0.18,0.21,0.242,0.274,0.306,0.340667,0.375333,0.41,0.403333,0.396667,0.39,0.38,0.37,0.36,0.36])
         
-    def lightAggregateBlocks(self, ElementName: str):
+    def lightAggregateBlocks(self, ElementName):
         self.ElementName = ElementName
         self.Type = 'LightAggregateBlocks'
         self.Density = 1400.0
@@ -68,7 +68,7 @@ class Materials:
         self.absorption = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
         self.scattering = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 
-    def denseAggregateBlocks(self, ElementName: str):
+    def denseAggregateBlocks(self, ElementName):
         self.ElementName = ElementName
         self.Type = 'DenseAggregateBlocks'
         self.Density = 2000.0
@@ -81,7 +81,7 @@ class Materials:
         self.absorption = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
         self.scattering = np.array([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 
-    def bricks(self, ElementName: str):
+    def bricks(self, ElementName):
         self.ElementName = ElementName
         self.Type = 'Bricks'
         self.Density = 1500.0
@@ -94,7 +94,7 @@ class Materials:
         self.absorption = np.array([0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3])
         self.scattering = np.array([0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2])
         
-    def plasterboard(self, ElementName: str):
+    def plasterboard(self, ElementName):
         self.ElementName = ElementName
         self.Type = 'Plasterboard'
         self.Density = 860.0
@@ -107,7 +107,7 @@ class Materials:
         self.absorption = np.array([0.12,0.12,0.12,0.13,0.14,0.15,0.15,0.15,0.15,0.183333,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.16,0.17,0.18])
         self.scattering = np.array([0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1])
         
-    def plasterboard2(self, ElementName: str):
+    def plasterboard2(self, ElementName):
         self.ElementName = ElementName
         self.Type = 'PlasterboardType2'
         self.Density = 680.0
@@ -120,7 +120,7 @@ class Materials:
         self.absorption = np.array([0.12,0.12,0.12,0.13,0.14,0.15,0.15,0.15,0.15,0.183333,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.13,0.14,0.15,0.15,0.15,0.15,0.16,0.17,0.18])
         self.scattering = np.array([0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1])
         
-    def chipboard(self, ElementName: str):
+    def chipboard(self, ElementName):
         self.ElementName = ElementName
         self.Type = 'Chipboard'
         self.Density = 760.0
